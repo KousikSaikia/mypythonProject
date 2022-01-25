@@ -4,16 +4,12 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-
 var1 = 60
 
 
-
-def Cal_secs(n):
-    print(f"There are {n*var1} mins in a {n} hours")
-
+def cal_secs(days_count):
+    return f"There are {days_count * var1} mins in a {days_count} hours"
 
 
-print("Enter No Of Days")
-var2 = input()
-Cal_secs(var2)
+my_var = cal_secs(45)
+print(my_var)
