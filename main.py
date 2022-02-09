@@ -6,13 +6,12 @@
 
 var1 = 60
 
-
 def cal_secs(days_count):
         return f"There are {days_count * var1} mins in a {days_count} hours"
 
 def validate():
     try:
-        my_var = int(user_input)
+        my_var = int(number_of_days)
         if my_var > 0:
             calucated_value = cal_secs(my_var)
             print(calucated_value)
@@ -23,8 +22,11 @@ def validate():
     except :
         print("This is a invalid input please input positive number")
 
+user_input = ""
+while user_input != 'exit':
+      user_input = input("Please enter a value\n")
+      for number_of_days in user_input.split(","):
+            validate()
 
-user_input = input("Please enter a value\n")
-validate()
 
 
